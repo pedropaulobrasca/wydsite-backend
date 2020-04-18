@@ -1,14 +1,15 @@
 // Update with your config settings
+const db = require('./src/config');
 
 module.exports = {
 
   development: {
     client: 'mysql',
     connection: {
-      host: '127.0.0.1',
-      user: 'root',
-      password: '',
-      database: 'wydserver'
+      host: db.HOST,
+      user: db.USER,
+      password: db.PASSWORD,
+      database: db.DB
     },
     migrations: {
       directory: './src/database/migrations'
